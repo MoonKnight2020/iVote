@@ -8,9 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class IVoteApplication {
 
 	public static void main(String[] args) {
-
-		System.out.println("Hello!");
-
 		SpringApplication.run(IVoteApplication.class, args);
 	}
 

@@ -11,6 +11,8 @@ public class IVoteApplicationTests {
 
 	@Test
 	public void contextLoads() {
+        System.out.println("Testing that the context loads...");
+        // assertion goes here?
 	}
 
 }

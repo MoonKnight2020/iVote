@@ -1,0 +1,1017 @@
+{
+  "kind": "civicinfo#voterInfoResponse",
+  "election": {
+    "id": "4483",
+    "name": "Michigan Primary Election",
+    "electionDay": "2018-08-07",
+    "ocdDivisionId": "ocd-division/country:us/state:mi"
+  },
+  "normalizedInput": {
+    "line1": "3670 Woodward Avenue",
+    "city": "Detroit",
+    "state": "MI",
+    "zip": "48201"
+  },
+  "pollingLocations": [
+    {
+      "address": {
+        "locationName": "DETROIT SCHOOL OF ARTS",
+        "line1": "123 Selden Street",
+        "city": "Detroit",
+        "state": "MI",
+        "zip": "48201"
+      },
+      "pollingHours": "Tue, Aug 7: 7 am - 8 pm",
+      "startDate": "2018-08-07",
+      "endDate": "2018-08-07",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    }
+  ],
+  "contests": [
+    {
+      "type": "Primary",
+      "primaryParty": "REPUBLICAN",
+      "ballotTitle": "GOVERNOR",
+      "office": "GOVERNOR - REP",
+      "district": {
+        "name": "STATE",
+        "scope": "statewide"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "1",
+      "candidates": [
+        {
+          "name": "BRIAN CALLEY",
+          "party": "REPUBLICAN",
+          "candidateUrl": "http://briancalley.com",
+          "phone": "906-748-0445",
+          "email": "media@briancalley.com"
+        },
+        {
+          "name": "PATRICK COLBECK",
+          "party": "REPUBLICAN",
+          "candidateUrl": "http://colbeckforgovernor.com",
+          "phone": "734-453-3105",
+          "email": "patrick@colbeckforgovernor.com"
+        },
+        {
+          "name": "JIM HINES",
+          "party": "REPUBLICAN",
+          "candidateUrl": "http://www.hines4michigan.com",
+          "phone": "989-798-3330",
+          "email": "jim@hines4michigan.com"
+        },
+        {
+          "name": "BILL SCHUETTE",
+          "party": "REPUBLICAN",
+          "candidateUrl": "http://www.billschuette.com",
+          "phone": "989-492-0344",
+          "email": "ondutybillschuette@gmail.com"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "REPUBLICAN",
+      "ballotTitle": "UNITED STATES SENATOR",
+      "office": "UNITED STATES SENATOR - REP",
+      "level": [
+        "country"
+      ],
+      "district": {
+        "name": "FEDERAL",
+        "scope": "national"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "2",
+      "candidates": [
+        {
+          "name": "JOHN JAMES",
+          "party": "REPUBLICAN",
+          "candidateUrl": "http://johnjamesforsenate.com",
+          "phone": "248-876-4790",
+          "email": "john@johnjamesforsenate.com"
+        },
+        {
+          "name": "SANDY PENSLER",
+          "party": "REPUBLICAN",
+          "candidateUrl": "http://www.penslerforsenate.com",
+          "phone": "248-838-3070"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "REPUBLICAN",
+      "ballotTitle": "REPRESENTATIVE IN CONGRESS",
+      "office": "REPRESENTATIVE IN CONGRESS - REP",
+      "level": [
+        "country"
+      ],
+      "district": {
+        "name": "US CONGRESSIONAL DISTRICT 13",
+        "scope": "congressional"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "15",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "REPUBLICAN",
+      "ballotTitle": "REPRESENTATIVE IN CONGRESS",
+      "office": "REPRESENTATIVE IN CONGRESS - REP",
+      "level": [
+        "country"
+      ],
+      "district": {
+        "name": "US CONGRESSIONAL DISTRICT 13",
+        "scope": "congressional"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "16",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "REPUBLICAN",
+      "ballotTitle": "STATE SENATOR",
+      "office": "STATE SENATOR - REP",
+      "level": [
+        "administrativeArea1"
+      ],
+      "district": {
+        "name": "STATE SENATE DISTRICT 1",
+        "scope": "stateUpper"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "18",
+      "candidates": [
+        {
+          "name": "PAULINE MONTIE",
+          "party": "REPUBLICAN",
+          "phone": "734-558-0482",
+          "email": "paulinemontie@yahoo.com"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "REPUBLICAN",
+      "ballotTitle": "REPRESENTATIVE IN STATE LEGISLATURE",
+      "office": "REPRESENTATIVE IN STATE LEGISLATURE - REP",
+      "level": [
+        "administrativeArea1"
+      ],
+      "district": {
+        "name": "STATE HOUSE DISTRICT 4",
+        "scope": "stateLower"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "60",
+      "candidates": [
+        {
+          "name": "HOWARD WEATHINGTON",
+          "party": "REPUBLICAN",
+          "phone": "313-610-1348",
+          "email": "luhow9@gmail.com"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "REPUBLICAN",
+      "ballotTitle": "COUNTY EXECUTIVE",
+      "office": "COUNTY EXECUTIVE - REP",
+      "level": [
+        "administrativeArea2"
+      ],
+      "district": {
+        "name": "WAYNE COUNTY",
+        "scope": "countywide"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "169",
+      "candidates": [
+        {
+          "name": "ADAM SALAM ADAMSKI",
+          "party": "REPUBLICAN",
+          "phone": "313-673-0607",
+          "email": "adamadamski678@yahoo.com"
+        },
+        {
+          "name": "DENIS CURRAN",
+          "party": "REPUBLICAN",
+          "phone": "734-427-7629"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "REPUBLICAN",
+      "ballotTitle": "COUNTY COMMISSIONER",
+      "office": "COUNTY COMMISSIONER - REP",
+      "level": [
+        "administrativeArea2"
+      ],
+      "district": {
+        "name": "WAYNE COUNTY COMMISSIONER DISTRICT 2",
+        "scope": "countyCouncil"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "824",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "REPUBLICAN",
+      "ballotTitle": "REPUBLICAN DELEGATE TO COUNTY CONVENTION",
+      "office": "REPUBLICAN DELEGATE TO COUNTY CONVENTION",
+      "district": {
+        "name": "CITY OF DETROIT, WARD 6, PRECINCT 150"
+      },
+      "numberElected": "2",
+      "ballotPlacement": "2636",
+      "candidates": [
+        {
+          "name": "MICHELLE LANE",
+          "party": "REPUBLICAN"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "DEMOCRATIC",
+      "ballotTitle": "GOVERNOR",
+      "office": "GOVERNOR - DEM",
+      "district": {
+        "name": "STATE",
+        "scope": "statewide"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "6013",
+      "candidates": [
+        {
+          "name": "ABDUL EL-SAYED",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://abdulformichigan.com",
+          "phone": "313-462-8177",
+          "email": "info@abdulformichigan.com"
+        },
+        {
+          "name": "SHRI THANEDAR",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://www.shri2018.com",
+          "phone": "734-834-2090",
+          "email": "shrithanedar@gmail.com"
+        },
+        {
+          "name": "GRETCHEN WHITMER",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://gretchenwhitmer.com",
+          "phone": "517-927-8566",
+          "email": "gretchen@gretchenwhitmer.com"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "DEMOCRATIC",
+      "ballotTitle": "UNITED STATES SENATOR",
+      "office": "UNITED STATES SENATOR - DEM",
+      "level": [
+        "country"
+      ],
+      "district": {
+        "name": "FEDERAL",
+        "scope": "national"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "6014",
+      "candidates": [
+        {
+          "name": "DEBBIE STABENOW",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://debbiestabenow.com",
+          "phone": "517-336-8500",
+          "email": "dstabenow@stabenowforsenate.com"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "DEMOCRATIC",
+      "ballotTitle": "REPRESENTATIVE IN CONGRESS",
+      "office": "REPRESENTATIVE IN CONGRESS - DEM",
+      "level": [
+        "country"
+      ],
+      "district": {
+        "name": "US CONGRESSIONAL DISTRICT 13",
+        "scope": "congressional"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "6027",
+      "candidates": [
+        {
+          "name": "IAN CONYERS",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://ianforcongress.com",
+          "phone": "313-333-6003"
+        },
+        {
+          "name": "SHANELLE JACKSON",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://shanelle.us",
+          "phone": "313-300-6928"
+        },
+        {
+          "name": "BRENDA JONES",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://votebrendajones.com",
+          "phone": "313-576-6686"
+        },
+        {
+          "name": "RASHIDA TLAIB",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://rashidaforcongress.com",
+          "phone": "313-550-8222"
+        },
+        {
+          "name": "BILL WILD",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://billwildforcongress.com",
+          "phone": "313-680-5450"
+        },
+        {
+          "name": "COLEMAN A. YOUNG, II",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://colemanyoung.com",
+          "phone": "313-579-9322"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "DEMOCRATIC",
+      "ballotTitle": "REPRESENTATIVE IN CONGRESS",
+      "office": "REPRESENTATIVE IN CONGRESS - DEM",
+      "level": [
+        "country"
+      ],
+      "district": {
+        "name": "US CONGRESSIONAL DISTRICT 13",
+        "scope": "congressional"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "6028",
+      "candidates": [
+        {
+          "name": "IAN CONYERS",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://ianforcongress.com",
+          "phone": "313-333-6003"
+        },
+        {
+          "name": "BRENDA JONES",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://votebrendajones.com",
+          "phone": "313-576-6686"
+        },
+        {
+          "name": "RASHIDA TLAIB",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://rashidaforcongress.com",
+          "phone": "313-550-8222"
+        },
+        {
+          "name": "BILL WILD",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://billwildforcongress.com",
+          "phone": "313-680-5450"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "DEMOCRATIC",
+      "ballotTitle": "STATE SENATOR",
+      "office": "STATE SENATOR - DEM",
+      "level": [
+        "administrativeArea1"
+      ],
+      "district": {
+        "name": "STATE SENATE DISTRICT 1",
+        "scope": "stateUpper"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "6030",
+      "candidates": [
+        {
+          "name": "STEPHANIE CHANG",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://stephaniechang.com",
+          "phone": "313-806-2466",
+          "email": "stephanielilychang@gmail.com"
+        },
+        {
+          "name": "JAMES COLE, JR.",
+          "party": "DEMOCRATIC",
+          "phone": "313-918-5661",
+          "email": "flyjimmyfly@yahoo.com"
+        },
+        {
+          "name": "NICHOLAS RIVERA",
+          "party": "DEMOCRATIC",
+          "phone": "313-753-0038",
+          "email": "nickrivera.senate@gmail.com"
+        },
+        {
+          "name": "STEPHANIE ROEHM",
+          "party": "DEMOCRATIC",
+          "phone": "313-686-9341"
+        },
+        {
+          "name": "BETTIE COOK SCOTT",
+          "party": "DEMOCRATIC",
+          "phone": "313-682-6929",
+          "email": "bettiecookscott@yahoo.com"
+        },
+        {
+          "name": "ALBERTA TINSLEY TALABI",
+          "party": "DEMOCRATIC",
+          "phone": "313-333-2023",
+          "email": "alberta4detroit@gmail.com"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "DEMOCRATIC",
+      "ballotTitle": "REPRESENTATIVE IN STATE LEGISLATURE",
+      "office": "REPRESENTATIVE IN STATE LEGISLATURE - DEM",
+      "level": [
+        "administrativeArea1"
+      ],
+      "district": {
+        "name": "STATE HOUSE DISTRICT 4",
+        "scope": "stateLower"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "6072",
+      "candidates": [
+        {
+          "name": "MD RABBI ALAM",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://www.mdalam.us",
+          "phone": "816-372-1873",
+          "email": "info@mdalam.us"
+        },
+        {
+          "name": "SAAD A. ALMASMARI",
+          "party": "DEMOCRATIC",
+          "phone": "313-445-8311",
+          "email": "salmasmari01@gmail.com"
+        },
+        {
+          "name": "DEREK BOSTON",
+          "party": "DEMOCRATIC",
+          "phone": "313-205-0025",
+          "email": "2050025@gmail.com"
+        },
+        {
+          "name": "CHRISTOPHER L. COLLINS",
+          "party": "DEMOCRATIC",
+          "phone": "313-239-8316"
+        },
+        {
+          "name": "MATT FRIEDRICHS",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://www.matt4staterep.com",
+          "phone": "313-600-1995",
+          "email": "friedrichs.matt@gmail.com"
+        },
+        {
+          "name": "JUSTIN JESSOP",
+          "party": "DEMOCRATIC",
+          "phone": "313-338-6676",
+          "email": "justin.jessop@yahoo.com"
+        },
+        {
+          "name": "MYYA JONES",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://www.myyajones.com",
+          "phone": "313-437-3303",
+          "email": "info@myyajones.com"
+        },
+        {
+          "name": "ERNEST T. LITTLE",
+          "party": "DEMOCRATIC",
+          "phone": "313-455-8349",
+          "email": "ern1384@gmail.com"
+        },
+        {
+          "name": "DIANE MCMILLAN",
+          "party": "DEMOCRATIC",
+          "phone": "313-544-3601",
+          "email": "dmcmillan4staterep@gmail.com"
+        },
+        {
+          "name": "JEFFREY NOLISH",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://votenolish.com",
+          "phone": "872-201-9358",
+          "email": "jnolish@gmail.com"
+        },
+        {
+          "name": "MICHELE OBERHOLTZER",
+          "party": "DEMOCRATIC",
+          "phone": "734-646-2084",
+          "email": "michmobi@gmail.com"
+        },
+        {
+          "name": "RICO RAZO",
+          "party": "DEMOCRATIC",
+          "phone": "313-205-9656",
+          "email": "razorico1@gmail.com"
+        },
+        {
+          "name": "SYED ROB",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://www.syedrob.com",
+          "email": "syedrob2018@gmail.com"
+        },
+        {
+          "name": "ISAAC ROBINSON",
+          "party": "DEMOCRATIC",
+          "candidateUrl": "http://robinsonformichigan.com",
+          "phone": "313-739-5093",
+          "email": "wisaacrobinson@gmail.com"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "DEMOCRATIC",
+      "ballotTitle": "COUNTY EXECUTIVE",
+      "office": "COUNTY EXECUTIVE - DEM",
+      "level": [
+        "administrativeArea2"
+      ],
+      "district": {
+        "name": "WAYNE COUNTY",
+        "scope": "countywide"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "6181",
+      "candidates": [
+        {
+          "name": "WARREN C. EVANS",
+          "party": "DEMOCRATIC",
+          "phone": "313-247-1334",
+          "email": "nikki@warrencevens.com"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "DEMOCRATIC",
+      "ballotTitle": "COUNTY COMMISSIONER",
+      "office": "COUNTY COMMISSIONER - DEM",
+      "level": [
+        "administrativeArea2"
+      ],
+      "district": {
+        "name": "WAYNE COUNTY COMMISSIONER DISTRICT 2",
+        "scope": "countyCouncil"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "6836",
+      "candidates": [
+        {
+          "name": "NAOMI ESTELLA ANDERSON",
+          "party": "DEMOCRATIC",
+          "phone": "313-922-2152"
+        },
+        {
+          "name": "JOEL BATTERMAN",
+          "party": "DEMOCRATIC",
+          "phone": "734-904-5548",
+          "email": "joelbatterman@gmail.com"
+        },
+        {
+          "name": "DALE FOSTER",
+          "party": "DEMOCRATIC",
+          "phone": "248-416-7490",
+          "email": "dalefoster2538@gmail.com"
+        },
+        {
+          "name": "EYANDRA OTIS",
+          "party": "DEMOCRATIC",
+          "phone": "313-214-8170",
+          "email": "lildre410@gmail.com"
+        },
+        {
+          "name": "NAKPANGI THOMAS",
+          "party": "DEMOCRATIC",
+          "phone": "313-312-0087",
+          "email": "nakpangi.thomas@gmail.com"
+        },
+        {
+          "name": "JEWEL WARE",
+          "party": "DEMOCRATIC",
+          "phone": "313-224-0916"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "DEMOCRATIC",
+      "ballotTitle": "DEMOCRATIC DELEGATE TO COUNTY CONVENTION",
+      "office": "DEMOCRATIC DELEGATE TO COUNTY CONVENTION",
+      "district": {
+        "name": "CITY OF DETROIT, WARD 6, PRECINCT 150"
+      },
+      "numberElected": "7",
+      "ballotPlacement": "8648",
+      "candidates": [
+        {
+          "name": "PAUL CORBETT",
+          "party": "DEMOCRATIC"
+        },
+        {
+          "name": "BAXTER JONES",
+          "party": "DEMOCRATIC"
+        },
+        {
+          "name": "CHRISTOPHER B. MCCLAIN",
+          "party": "DEMOCRATIC"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "LIBERTARIAN",
+      "ballotTitle": "GOVERNOR",
+      "office": "GOVERNOR - LIB",
+      "district": {
+        "name": "STATE",
+        "scope": "statewide"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "12025",
+      "candidates": [
+        {
+          "name": "BILL GELINEAU",
+          "party": "LIBERTARIAN",
+          "candidateUrl": "http://www.cometogethermichigan.org",
+          "phone": "616-723-2776",
+          "email": "campaign@liberty4gov.org"
+        },
+        {
+          "name": "JOHN J. TATAR",
+          "party": "LIBERTARIAN",
+          "candidateUrl": "http://www.johnjtatar.com",
+          "phone": "734-968-4715",
+          "email": "johnjtatar@yahoo.com"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "LIBERTARIAN",
+      "ballotTitle": "UNITED STATES SENATOR",
+      "office": "UNITED STATES SENATOR - LIB",
+      "level": [
+        "country"
+      ],
+      "district": {
+        "name": "FEDERAL",
+        "scope": "national"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "12026",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "LIBERTARIAN",
+      "ballotTitle": "REPRESENTATIVE IN CONGRESS",
+      "office": "REPRESENTATIVE IN CONGRESS - LIB",
+      "level": [
+        "country"
+      ],
+      "district": {
+        "name": "US CONGRESSIONAL DISTRICT 13",
+        "scope": "congressional"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "12039",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "LIBERTARIAN",
+      "ballotTitle": "REPRESENTATIVE IN CONGRESS",
+      "office": "REPRESENTATIVE IN CONGRESS - LIB",
+      "level": [
+        "country"
+      ],
+      "district": {
+        "name": "US CONGRESSIONAL DISTRICT 13",
+        "scope": "congressional"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "12040",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "LIBERTARIAN",
+      "ballotTitle": "STATE SENATOR",
+      "office": "STATE SENATOR - LIB",
+      "level": [
+        "administrativeArea1"
+      ],
+      "district": {
+        "name": "STATE SENATE DISTRICT 1",
+        "scope": "stateUpper"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "12042",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "LIBERTARIAN",
+      "ballotTitle": "REPRESENTATIVE IN STATE LEGISLATURE",
+      "office": "REPRESENTATIVE IN STATE LEGISLATURE - LIB",
+      "level": [
+        "administrativeArea1"
+      ],
+      "district": {
+        "name": "STATE HOUSE DISTRICT 4",
+        "scope": "stateLower"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "12084",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "LIBERTARIAN",
+      "ballotTitle": "COUNTY EXECUTIVE",
+      "office": "COUNTY EXECUTIVE - LIB",
+      "level": [
+        "administrativeArea2"
+      ],
+      "district": {
+        "name": "WAYNE COUNTY",
+        "scope": "countywide"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "12193",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "LIBERTARIAN",
+      "ballotTitle": "COUNTY COMMISSIONER",
+      "office": "COUNTY COMMISSIONER - LIB",
+      "level": [
+        "administrativeArea2"
+      ],
+      "district": {
+        "name": "WAYNE COUNTY COMMISSIONER DISTRICT 2",
+        "scope": "countyCouncil"
+      },
+      "numberElected": "1",
+      "ballotPlacement": "12848",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Primary",
+      "primaryParty": "LIBERTARIAN",
+      "ballotTitle": "LIBERTARIAN DELEGATE TO COUNTY CONVENTION",
+      "office": "LIBERTARIAN DELEGATE TO COUNTY CONVENTION",
+      "district": {
+        "name": "CITY OF DETROIT, WARD 6, PRECINCT 150"
+      },
+      "numberElected": "2",
+      "ballotPlacement": "14660",
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    },
+    {
+      "type": "Referendum",
+      "ballotTitle": "PROPOSAL R: GENERAL REVISION OF THE 2012 DETROIT CITY CHARTER",
+      "district": {
+        "name": "CITY OF DETROIT",
+        "scope": "citywide"
+      },
+      "ballotPlacement": "30001",
+      "referendumTitle": "PROPOSAL R: GENERAL REVISION OF THE 2012 DETROIT CITY CHARTER",
+      "referendumText": "DO YOU FAVOR A GENERAL REVISION OF THE 2012 DETROIT CITY CHARTER BY A CHARTER REVISION COMMISSION?",
+      "referendumBallotResponses": [
+        "PROPOSAL R: GENERAL REVISION OF THE 2012 DETROIT CITY CHARTER"
+      ],
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    }
+  ],
+  "state": [
+    {
+      "name": "Michigan",
+      "electionAdministrationBody": {
+        "electionInfoUrl": "http://www.michigan.gov/sos/0,1607,7-127-1633---,00.html",
+        "electionRegistrationUrl": "http://www.michigan.gov/sos/0,1607,7-127-1633_8716_8726_47669---,00.html",
+        "electionRegistrationConfirmationUrl": "https://webapps.sos.state.mi.us/MVIC/",
+        "absenteeVotingInfoUrl": "http://www.michigan.gov/sos/0,8611,7-127-1633_8716_8728-21037--,00.html",
+        "votingLocationFinderUrl": "http://www.michigan.gov/sos/0,4670,7-127-1633_8716_11583---,00.html",
+        "ballotInfoUrl": "https://webapps.sos.state.mi.us/MVIC/"
+      },
+      "local_jurisdiction": {
+        "name": "DETROIT",
+        "electionAdministrationBody": {
+          "electionInfoUrl": "http://www.detroitmi.gov/CityCouncil/CityClerk/tabid/2584/Default.aspx",
+          "electionRegistrationUrl": "http://www.michigan.gov/sos/0,1607,7-127-1633_8716_8726_47669---,00.html",
+          "electionRegistrationConfirmationUrl": "https://webapps.sos.state.mi.us/MVIC/",
+          "absenteeVotingInfoUrl": "http://www.michigan.gov/sos/0,8611,7-127-1633_8716_8728-21037--,00.html",
+          "votingLocationFinderUrl": "http://www.michigan.gov/sos/0,4670,7-127-1633_8716_11583---,00.html",
+          "ballotInfoUrl": "https://webapps.sos.state.mi.us/MVIC/"
+        },
+        "sources": [
+          {
+            "name": "Voting Information Project",
+            "official": true
+          }
+        ]
+      },
+      "sources": [
+        {
+          "name": "Voting Information Project",
+          "official": true
+        }
+      ]
+    }
+  ]
+}

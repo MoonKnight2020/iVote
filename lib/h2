@@ -1,0 +1,2 @@
+#!/bin/sh
+cd /usr/local/Cellar/h2/1.4.197/libexec && bin/h2.sh "$@"

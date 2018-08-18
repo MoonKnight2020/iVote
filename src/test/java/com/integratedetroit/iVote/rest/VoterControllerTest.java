@@ -41,7 +41,30 @@ public class VoterControllerTest {
         verify(mockService)
                 .createVoter( voterPassedIn );
         assertThat( responseEntity )
-                .isEqualTo( expectedVoter );
+                .isEqualTo( expectedResponseEntity );
+
+    }
+
+    @Test
+    public void createVoter_returnsHTTPStatusNoContent() {
+
+        Voter expectedVoter = new Voter();
+        Voter voterPassedIn = new Voter();
+
+        expectedVoter.setVoterID(-1);
+        int inputId = 8;
+
+        when ( mockService.getVoter(inputId))
+                .thenReturn(expectedVoter);
+
+        ResponseEntity expectedResponseEntity = new ResponseEntity<>(
+                expectedVoter, HttpStatus.NO_CONTENT);
+
+        ResponseEntity<Voter> responseEntity = controller.createVoter( voterPassedIn );
+        verify(mockService)
+                .createVoter( voterPassedIn );
+        assertThat( responseEntity )
+                .isEqualTo( expectedResponseEntity );
 
     }
 

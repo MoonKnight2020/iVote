@@ -1,4 +1,9 @@
 package com.integratedetroit.iVote.data;
 
-public class VoterRepository {
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface VoterRepository extends CrudRepository<VoterRecord, Integer> {
+
 }

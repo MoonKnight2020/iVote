@@ -2,6 +2,9 @@ package com.integratedetroit.iVote.data;
 
 import javax.persistence.*;
 
+/**
+ * Describes the fields for the Voter table of the database.
+ */
 @Entity
 @Table(name = "voter_record")
 public class VoterRecord {
@@ -23,5 +26,9 @@ public class VoterRecord {
     private int zipCode;
 
     private String passwordHash;
+
+    // TODO: Getters for the fields
+
+    // TODO: Setters for the fields
 
 }

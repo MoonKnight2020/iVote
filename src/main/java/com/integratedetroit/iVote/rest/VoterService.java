@@ -1,12 +1,16 @@
 package com.integratedetroit.iVote.rest;
 
+// TODO: Review imports after all tests pass
 import com.integratedetroit.iVote.data.Voter;
 import com.integratedetroit.iVote.data.VoterRecord;
 import com.integratedetroit.iVote.data.VoterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+// import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
+/**
+ * Connects Voter to VoterRecord by way of VoterRepository.
+ */
 @Component
 public class VoterService {
 
@@ -22,7 +26,7 @@ public class VoterService {
         return Voter.fromRecord(record);
     }
 
-
+    // TODO: Rewrite to return actual Voter
     public Voter getVoter(int voterId) {
         return null;
     }

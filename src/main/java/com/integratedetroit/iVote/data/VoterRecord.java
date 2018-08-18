@@ -19,6 +19,8 @@ public class VoterRecord {
 
     private String streetAddress;
 
+    private String streetAddress2;
+
     private String city;
 
     private String state;
@@ -27,8 +29,29 @@ public class VoterRecord {
 
     private String passwordHash;
 
+    public VoterRecord() {
+        //
+    }
+
+    public VoterRecord(String firstName, int idNumber) {
+        this.firstName = firstName;
+        this.id = idNumber;
+    }
+
     // TODO: Getters for the fields
 
     // TODO: Setters for the fields
+
+    public static VoterRecord fromRecord(VoterRecord record) {
+        return new VoterRecord();
+    }
+
+    public long getVoterId() {
+        return this.id;
+    }
+
+    public void setVoterID(int number) {
+        this.id = number;
+    }
 
 }

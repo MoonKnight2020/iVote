@@ -1,6 +1,6 @@
 package com.integratedetroit.iVote.rest;
 
-import com.integratedetroit.iVote.data.Voter;
+import com.integratedetroit.iVote.data.VoterRecord;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.HttpStatus;
@@ -26,8 +26,8 @@ public class VoterControllerTest {
     @Test
     public void createVoter_returnsHTTPStatusCreated() {
 
-        Voter expectedVoter = new Voter();
-        Voter voterPassedIn = new Voter();
+        VoterRecord expectedVoter = new VoterRecord();
+        VoterRecord voterPassedIn = new VoterRecord();
 
         expectedVoter.setVoterID(1);
 
@@ -37,7 +37,7 @@ public class VoterControllerTest {
         ResponseEntity expectedResponseEntity = new ResponseEntity<>(
                 expectedVoter, HttpStatus.CREATED);
 
-        ResponseEntity<Voter> responseEntity = controller.createVoter( voterPassedIn );
+        ResponseEntity<VoterRecord> responseEntity = controller.createVoter( voterPassedIn );
         verify(mockService)
                 .createVoter( voterPassedIn );
         assertThat( responseEntity )
@@ -48,19 +48,19 @@ public class VoterControllerTest {
     @Test
     public void createVoter_returnsHTTPStatusNoContent() {
 
-        Voter expectedVoter = new Voter();
-        Voter voterPassedIn = new Voter();
+        VoterRecord expectedVoter = new VoterRecord();
+        VoterRecord voterPassedIn = new VoterRecord();
 
         expectedVoter.setVoterID(-1);
         int inputId = 8;
 
-        when ( mockService.getVoter(inputId))
+        when ( mockService.createVoter(voterPassedIn))
                 .thenReturn(expectedVoter);
 
         ResponseEntity expectedResponseEntity = new ResponseEntity<>(
                 expectedVoter, HttpStatus.NO_CONTENT);
 
-        ResponseEntity<Voter> responseEntity = controller.createVoter( voterPassedIn );
+        ResponseEntity<VoterRecord> responseEntity = controller.createVoter( voterPassedIn );
         verify(mockService)
                 .createVoter( voterPassedIn );
         assertThat( responseEntity )

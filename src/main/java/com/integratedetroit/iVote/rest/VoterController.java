@@ -1,6 +1,6 @@
 package com.integratedetroit.iVote.rest;
 
-import com.integratedetroit.iVote.data.Voter;
+import com.integratedetroit.iVote.data.VoterRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +19,7 @@ public class VoterController {
 
     @PostMapping
     public @ResponseBody
-    ResponseEntity<Voter> createVoter(@RequestBody Voter voter) {
+    ResponseEntity<VoterRecord> createVoter(@RequestBody VoterRecord voter) {
         voter = this.service.createVoter(voter);
         if (voter.getVoterId() == -1) {
             return new ResponseEntity<>(voter, HttpStatus.NO_CONTENT);

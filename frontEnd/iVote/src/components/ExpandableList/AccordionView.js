@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from '../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import * as Animatable from 'react-native-animatable';

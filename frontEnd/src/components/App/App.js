@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, AppRegistry } from 'react-native';
-import AccordionView from "./components/ExpandableList/AccordionView";
+import AccordionView from "../components/ExpandableList/AccordionView";
 
 export default class App extends React.Component {
   render() {

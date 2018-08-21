@@ -24,6 +24,30 @@ export default class MainPage extends React.Component{
         }
     }
 
+    componentDidMount() {
+        this.login();
+    }
+
+    login = () => {
+        fetch('https://content.googleapis.com/civicinfo/v2/voterinfo?address=120%20W%201st%20St%2C%20Casper%2C%20WY%2082601&officialOnly=true&alt=json&key=AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY',{
+            method:'GET'
+        })
+        .then((response) => response.json())
+        .then((res) => {
+            var contestArr = [];
+            for(i=0;i<res.contests.length;i++){
+                contestArr.push({
+                    electionName : res.name,
+                    contestType : res.contests[i].type,
+                    contestPrimaryParty : res.contests[i].primaryParty,
+                    contestBallotTitle : res.contests[i].ballotTitle
+                })
+            }
+            
+            alert(JSON.stringify(contestArr));
+        }).done();
+    }
+
     render() {
         return(
             <KeyboardAvoidingView behavior='padding' style={styles.wrapper}>

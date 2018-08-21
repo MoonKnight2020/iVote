@@ -45,64 +45,52 @@ public class VoterRecordTest {
     @Test
     public void setFirstName() {
         String newFirstName = "Betty";
-
         record.setVoterFirstName(newFirstName);
-
         assertEquals(newFirstName, record.getVoterFirstName());
     }
 
     @Test
     public void getFirstName() {
         String expectedVoterFirstName = "Alice";
-
         assertEquals( expectedVoterFirstName, record.getVoterFirstName());
     }
 
     @Test
     public void setLastName() {
         String newLastName = "Smith";
-
         record.setVoterLastName(newLastName);
-
         assertEquals(newLastName, record.getVoterLastName());
     }
 
     @Test
     public void getLastName() {
         String expectedVoterLastName = "Johnson";
-
         assertEquals( expectedVoterLastName, record.getVoterLastName());
     }
 
     @Test
     public void setStreetAddress() {
         String newStreetAddress = "1234 Ball St";
-
         record.setStreetAddress(newStreetAddress);
-
         assertEquals(newStreetAddress, record.getStreetAddress());
     }
 
     @Test
     public void getStreetAddress() {
         String streetAddress = "1234 Main St";
-
         assertEquals(streetAddress, record.getStreetAddress());
     }
 
     @Test
     public void setStreetAddress2() {
         String newStreetAddress2 = "Apt 4";
-
         record.setStreetAddress2(newStreetAddress2);
-
         assertEquals(newStreetAddress2, record.getStreetAddress2());
     }
 
     @Test
     public void getStreetAddress2() {
         String streetAddress2 = "Apt 123";
-
         assertEquals(streetAddress2, record.getStreetAddress2());
     }
 

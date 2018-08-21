@@ -15,10 +15,10 @@ public class VoterServiceTest {
     @Test
     public void createVoter_savesToRepo() {
 
-        int expectedVoterId = 7;
-        String expectedFirstName = "Alice";
-
-        VoterRecord expectedRecord = new VoterRecord(expectedFirstName, expectedVoterId);
+//        int expectedVoterId = 7;
+//        String expectedFirstName = "Alice";
+//
+//        VoterRecord expectedRecord = new VoterRecord(expectedVoterId, expectedFirstName);
 
 
     }

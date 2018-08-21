@@ -30,17 +30,22 @@ public class VoterRecord {
     private String passwordHash;
 
     public VoterRecord() {
-        //
+
     }
 
-    public VoterRecord(String firstName, int idNumber) {
-        this.firstName = firstName;
+
+    public VoterRecord(int idNumber, String firstName, String lastName, String streetAddress, String streetAddress2, String city, String state, int zipCode, String passwordHash) {
         this.id = idNumber;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.streetAddress = streetAddress;
+        this.streetAddress2 = streetAddress2;
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
+        this.passwordHash = passwordHash;
     }
 
-    // TODO: Getters for the fields
-
-    // TODO: Setters for the fields
 
     public static VoterRecord fromRecord(VoterRecord record) {
         return new VoterRecord();
@@ -52,6 +57,71 @@ public class VoterRecord {
 
     public void setVoterID(int number) {
         this.id = number;
+    }
+
+    public void setVoterFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getVoterFirstName() {
+        return this.firstName;
+    }
+
+    public void setVoterLastName(String lastName) {
+        this.lastName = lastName;
+
+    }
+
+    public String getVoterLastName() {
+        return this.lastName;
+    }
+
+    public String getStreetAddress() {
+        return this.streetAddress;
+    }
+
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
+    public void setStreetAddress2(String streetAddress2) {
+        this.streetAddress2 = streetAddress2;
+    }
+
+    public String getStreetAddress2() {
+        return this.streetAddress2;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCity() {
+        return this.city;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getState() {
+        return this.state;
+    }
+
+    public void setZipCode(int zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public int getZipCode() {
+        return this.zipCode;
+    }
+
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
+
+    public String getPasswordHash() {
+        return this.passwordHash;
     }
 
 }

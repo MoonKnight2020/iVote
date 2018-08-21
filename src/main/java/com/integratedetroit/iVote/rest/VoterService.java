@@ -5,6 +5,7 @@ import com.integratedetroit.iVote.data.VoterRecord;
 import com.integratedetroit.iVote.data.VoterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.http.ResponseEntity;
+import org.springframework.orm.jpa.JpaSystemException;
 import org.springframework.stereotype.Component;
 import java.util.Optional;
 

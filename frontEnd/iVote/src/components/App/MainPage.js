@@ -7,7 +7,9 @@ import {
     KeyboardAvoidingView,
     TouchableOpacity,
     AsyncStorage,
-    Image
+    Image,
+    ActivityIndicator,
+    ScrollView
 } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
@@ -16,100 +18,98 @@ export default class MainPage extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            firstName: '',
-            lastName: '',
-            email:'',
-            password:'',
-            confirmPassword:''
+            isLoading: true,
+            dataSource: null,
+            address:'120 West 1st Street Casper WY 82601',
+            key:'AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY'
         }
     }
 
     componentDidMount() {
-        this.login();
-    }
-
-    login = () => {
-        fetch('https://content.googleapis.com/civicinfo/v2/voterinfo?address=120%20W%201st%20St%2C%20Casper%2C%20WY%2082601&officialOnly=true&alt=json&key=AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY',{
+            var url = 'https://content.googleapis.com/civicinfo/v2/voterinfo?address=' + 
+            encodeURIComponent(this.state.address) + 
+            '&officialOnly=true&alt=json&key='+ 
+            encodeURIComponent(this.state.key);
+            alert(url);
+            fetch(url,{
+            //fetch('https://content.googleapis.com/civicinfo/v2/voterinfo?address=120%20W%201st%20St%2C%20Casper%2C%20WY%2082601&officialOnly=true&alt=json&key=AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY',{
+            //fetch('https://content.googleapis.com/civicinfo/v2/voterinfo?address=${encodeURIComponent(this.state.address)}&officialOnly=true&alt=json&key=AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY',{
+            //fetch('https://content.googleapis.com/civicinfo/v2/voterinfo',{
             method:'GET'
         })
         .then((response) => response.json())
-        .then((res) => {
+         .then((res) => {
+                
             var contestArr = [];
             for(i=0;i<res.contests.length;i++){
                 contestArr.push({
-                    electionName : res.name,
+                    electionName : res.election.name,
                     contestType : res.contests[i].type,
                     contestPrimaryParty : res.contests[i].primaryParty,
                     contestBallotTitle : res.contests[i].ballotTitle
                 })
             }
-            
-            alert(JSON.stringify(contestArr));
-        }).done();
+
+            this.setState({
+                isLoading: false,
+                dataSource: contestArr
+            })
+           
+           //alert(JSON.stringify(contestArr));
+        }).catch((error) => {
+            alert(error);
+        });
     }
 
     render() {
-        return(
-            <KeyboardAvoidingView behavior='padding' style={styles.wrapper}>
-                <View style={styles.container}>
-                    <Image source={require('../../Images/icon.png')} style={styles.mainPageLogo} />
-                    <Text> List of election goes here </Text>
+
+        if(this.state.isLoading){
+            return (
+                <View stlye={styles.container}>
+                    <ActivityIndicator />
                 </View>
-            </KeyboardAvoidingView>
-        );
+            )
+        } else {
+            var contests = this.state.dataSource.map((val, key) => {
+                return (
+                    <View key={key} style={styles.item}>
+                        <Text>{val.contestBallotTitle}</Text>
+                        <Text>{val.electionName}</Text>
+                        <Text>{val.contestType}</Text>
+                        <Text>{val.contestPrimaryParty}</Text>
+                    </View>
+                )
+            });
+            return (
+                <ScrollView 
+                    style={{flex:1}}
+                    contentContainerStyle={styles.scrollview}>
+
+                    {contests}
+                </ScrollView>
+            )
+        }
     }
 
 }
 
 const styles = StyleSheet.create({
-    wrapper: {
-        flex: 1
-    },
     container: {
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
-      justifyContent: 'center',
-      paddingLeft: 40,
-      paddingRight: 40
+      justifyContent: 'center'
     },
-    mainPageLogo: {
-        width: 40,
-        height: 40,
-        marginBottom: 20
+    scrollview:{
+        flexGrow: 1,
     },
-    textInput: {
+    item: {
+        flex: 1,
         alignSelf: 'stretch',
-        padding: 16,
-        marginBottom: 20,
-        backgroundColor: '#fff',
-        borderColor: 'grey',
-        borderWidth: 1,
-        borderRadius: 10
-
-    },
-    loginBtn: {
-        alignSelf: 'stretch',
-        backgroundColor: '#054d96',
-        padding: 20,
-        marginLeft: 80,
-        marginRight: 80,
-        marginBottom: 20,
-        alignItems: 'center',
-        borderRadius: 40
-    },
-    signupBtn: {
-        alignSelf: 'stretch',
-        backgroundColor: '#e0243a',
-        padding: 20,
-        marginLeft: 80,
-        marginRight: 80,
-        marginBottom: 20,
-        alignItems: 'center',
-        borderRadius: 40
-    },
-    btnText: {
-        color: '#fff',
-        fontWeight: 'bold'
+        margin: 10,
+        alignItems:'center',
+        justifyContent:'center',
+        borderBottomWidth: 1,
+        borderBottomColor:'#777'
     }
 });

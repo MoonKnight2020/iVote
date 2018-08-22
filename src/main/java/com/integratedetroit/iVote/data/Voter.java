@@ -1,6 +1,6 @@
-package com.integratedetroit.iVote.rest;
+package com.integratedetroit.iVote.data;
 
-import com.integratedetroit.iVote.data.VoterRecord;
+import java.util.Objects;
 
 public class Voter {
 
@@ -89,5 +89,25 @@ public class Voter {
         voter.setZipCode(voterRecord.getZipCode());
 
         return voter;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Voter voter = (Voter) o;
+        return zipCode == voter.zipCode &&
+                Objects.equals(firstName, voter.firstName) &&
+                Objects.equals(lastName, voter.lastName) &&
+                Objects.equals(streetAddress, voter.streetAddress) &&
+                Objects.equals(streetAddress2, voter.streetAddress2) &&
+                Objects.equals(city, voter.city) &&
+                Objects.equals(state, voter.state);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(firstName, lastName, streetAddress, streetAddress2, city, state, zipCode);
     }
 }

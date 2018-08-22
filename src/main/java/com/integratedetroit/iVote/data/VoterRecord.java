@@ -1,6 +1,7 @@
 package com.integratedetroit.iVote.data;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 /**
  * Describes the fields for the Voter table of the database.
@@ -110,4 +111,25 @@ public class VoterRecord {
         return this.passwordHash;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        VoterRecord that = (VoterRecord) o;
+        return id == that.id &&
+                zipCode == that.zipCode &&
+                Objects.equals(firstName, that.firstName) &&
+                Objects.equals(lastName, that.lastName) &&
+                Objects.equals(streetAddress, that.streetAddress) &&
+                Objects.equals(streetAddress2, that.streetAddress2) &&
+                Objects.equals(city, that.city) &&
+                Objects.equals(state, that.state) &&
+                Objects.equals(passwordHash, that.passwordHash);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, firstName, lastName, streetAddress, streetAddress2, city, state, zipCode, passwordHash);
+    }
 }

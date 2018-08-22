@@ -1,19 +1,13 @@
 package com.integratedetroit.iVote.rest;
 
+import com.integratedetroit.iVote.data.Voter;
 import com.integratedetroit.iVote.data.VoterRecord;
 import com.integratedetroit.iVote.data.VoterRepository;
-import org.junit.Before;
 import org.junit.Test;
 
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.Mockito.*;
 import org.mockito.junit.MockitoJUnitRunner;
-
-import org.springframework.dao.DataAccessException;
-import org.springframework.orm.jpa.JpaSystemException;
-
-import java.util.Optional;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
@@ -25,10 +19,6 @@ public class VoterServiceTest {
     @Mock
     private VoterRepository repo;
 
-    @Before
-    public void setUp() {
-        //
-    }
 
     @Test
     public void createVoter_savesToRepo() {
@@ -62,7 +52,7 @@ public class VoterServiceTest {
         record.setState(state);
         record.setZipCode(zipCode);
 
-        when(repo.save(new VoterRecord())).thenReturn(record);
+        when(repo.save(recordPassedIn)).thenReturn(record);
 
         Voter voter = new Voter();
         voter.setFirstName(firstName);

@@ -26,7 +26,6 @@ public class VoterControllerTest {
     @Test
     public void createVoter_returnsHTTPStatusCreated() {
 
-//
 
     }
 

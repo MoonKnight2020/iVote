@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "79895e3c-dec9-48fd-a03e-41ed8605dff9",
+		"name": "ivote",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createVoter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6750c811-c43a-4ae9-84b7-d37997b86867",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "integrate",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "postgres",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Sam\",\n\t\"lastName\": \"M\",\n\t\"streetAddress\": \"street\",\n\t\"streetAddress2\": \"2 street\",\n\t\"city\": \"this is city\",\n\t\"state\": \"and state\",\n\t\"zipCode\": 12345\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/voter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"voter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

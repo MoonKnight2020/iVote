@@ -1,11 +1,11 @@
 package com.integratedetroit.iVote.rest;
 
 // TODO: Review imports after all tests pass
+import com.integratedetroit.iVote.data.Voter;
 import com.integratedetroit.iVote.data.VoterRecord;
 import com.integratedetroit.iVote.data.VoterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.http.ResponseEntity;
-import org.springframework.orm.jpa.JpaSystemException;
 import org.springframework.stereotype.Component;
 import java.util.Optional;
 
@@ -24,7 +24,7 @@ public class VoterService {
 
     public Voter createVoter(Voter voter) {
         VoterRecord voterRecord = createVoterRecord(voter);
-        VoterRecord record = this.repository.save(new VoterRecord());
+        VoterRecord record = this.repository.save(voterRecord);
         return Voter.fromRecord(record);
     }
 

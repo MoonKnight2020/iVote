@@ -19,11 +19,7 @@ public class VoterController {
 
     @PostMapping
     public @ResponseBody
-    ResponseEntity<VoterRecord> createVoter(@RequestBody VoterRecord voter) {
-        voter = this.service.createVoter(voter);
-        if (voter.getVoterId() == -1) {
-            return new ResponseEntity<>(voter, HttpStatus.NO_CONTENT);
-        }
-        return new ResponseEntity<>(voter, HttpStatus.CREATED);
+    ResponseEntity<Voter> createVoter(@RequestBody VoterRecord voter) {
+        return null;
     }
 }

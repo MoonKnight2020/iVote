@@ -22,9 +22,22 @@ public class VoterService {
         this.repository = repository;
     }
 
-    public VoterRecord createVoter(VoterRecord voterPassedIn) {
+    public Voter createVoter(Voter voter) {
+        VoterRecord voterRecord = createVoterRecord(voter);
         VoterRecord record = this.repository.save(new VoterRecord());
-        return VoterRecord.fromRecord(record);
+        return Voter.fromRecord(record);
+    }
+
+    private VoterRecord createVoterRecord(Voter voter){
+        VoterRecord voterRecord = new VoterRecord();
+        voterRecord.setVoterFirstName(voter.getFirstName());
+        voterRecord.setVoterLastName(voter.getLastName());
+        voterRecord.setStreetAddress(voter.getStreetAddress());
+        voterRecord.setStreetAddress2(voter.getStreetAddress2());
+        voterRecord.setState(voter.getState());
+        voterRecord.setCity(voter.getCity());
+        voterRecord.setZipCode(voter.getZipCode());
+        return voterRecord;
     }
 
     public VoterRecord getVoter(int voterId) {

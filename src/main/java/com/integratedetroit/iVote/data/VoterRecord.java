@@ -33,20 +33,6 @@ public class VoterRecord {
 
     }
 
-
-    public VoterRecord(int idNumber, String firstName, String lastName, String streetAddress, String streetAddress2, String city, String state, int zipCode, String passwordHash) {
-        this.id = idNumber;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.streetAddress = streetAddress;
-        this.streetAddress2 = streetAddress2;
-        this.city = city;
-        this.state = state;
-        this.zipCode = zipCode;
-        this.passwordHash = passwordHash;
-    }
-
-
     public static VoterRecord fromRecord(VoterRecord record) {
         return new VoterRecord();
     }

@@ -37,6 +37,8 @@ public class VoterService {
         voterRecord.setState(voter.getState());
         voterRecord.setCity(voter.getCity());
         voterRecord.setZipCode(voter.getZipCode());
+        voterRecord.setEmailAddress(voter.getEmailAddress());
+        voterRecord.setPasswordHash(voter.getPasswordHash());
         return voterRecord;
     }
 

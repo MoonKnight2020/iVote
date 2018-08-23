@@ -2,6 +2,9 @@ package com.integratedetroit.iVote.data;
 
 import java.util.Objects;
 
+/**
+ * This class provides a model for the VoterRecord.
+ */
 public class Voter {
 
     private String firstName;
@@ -17,6 +20,10 @@ public class Voter {
     private String state;
 
     private int zipCode;
+
+    private String emailAddress;
+
+    private String passwordHash;
 
     public Voter() {
 
@@ -78,6 +85,22 @@ public class Voter {
         this.zipCode = zipCode;
     }
 
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getEmailAddress() {
+        return this.emailAddress;
+    }
+
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
+
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
     public static Voter fromRecord(VoterRecord voterRecord) {
         Voter voter = new Voter();
         voter.setFirstName(voterRecord.getVoterFirstName());
@@ -87,6 +110,8 @@ public class Voter {
         voter.setCity(voterRecord.getCity());
         voter.setState(voterRecord.getState());
         voter.setZipCode(voterRecord.getZipCode());
+        voter.setEmailAddress(voterRecord.getEmailAddress());
+        voter.setPasswordHash(voterRecord.getPasswordHash());
 
         return voter;
     }
@@ -109,5 +134,9 @@ public class Voter {
     public int hashCode() {
 
         return Objects.hash(firstName, lastName, streetAddress, streetAddress2, city, state, zipCode);
+    }
+
+    public void setId(int i) {
+        //
     }
 }

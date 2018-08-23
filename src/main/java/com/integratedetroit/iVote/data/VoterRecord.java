@@ -4,7 +4,8 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /**
- * Describes the fields for the Voter table of the database.
+ * Describes the fields for the Voter table of the database. VoterService creates Voter to turn it into a VoterRecord,
+ * database gives an ID to the VoterRecord, and then the VoterRecord is passed to the VoterRepository.
  */
 @Entity
 @Table(name = "voter_record")
@@ -27,6 +28,8 @@ public class VoterRecord {
     private String state;
 
     private int zipCode;
+
+    private String emailAddress;
 
     private String passwordHash;
 
@@ -103,6 +106,14 @@ public class VoterRecord {
         return this.zipCode;
     }
 
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getEmailAddress() {
+        return this.emailAddress;
+    }
+
     public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
     }
@@ -112,10 +123,10 @@ public class VoterRecord {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        VoterRecord that = (VoterRecord) o;
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        VoterRecord that = (VoterRecord) obj;
         return id == that.id &&
                 zipCode == that.zipCode &&
                 Objects.equals(firstName, that.firstName) &&
@@ -124,12 +135,13 @@ public class VoterRecord {
                 Objects.equals(streetAddress2, that.streetAddress2) &&
                 Objects.equals(city, that.city) &&
                 Objects.equals(state, that.state) &&
+                Objects.equals(emailAddress, that.emailAddress) &&
                 Objects.equals(passwordHash, that.passwordHash);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, firstName, lastName, streetAddress, streetAddress2, city, state, zipCode, passwordHash);
+        return Objects.hash(id, firstName, lastName, streetAddress, streetAddress2, city, state, zipCode, emailAddress, passwordHash);
     }
 }

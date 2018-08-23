@@ -30,7 +30,7 @@ export default class MainPage extends React.Component{
             encodeURIComponent(this.state.address) + 
             '&officialOnly=true&alt=json&key='+ 
             encodeURIComponent(this.state.key);
-            alert(url);
+            //alert(url);
             fetch(url,{
             //fetch('https://content.googleapis.com/civicinfo/v2/voterinfo?address=120%20W%201st%20St%2C%20Casper%2C%20WY%2082601&officialOnly=true&alt=json&key=AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY',{
             //fetch('https://content.googleapis.com/civicinfo/v2/voterinfo?address=${encodeURIComponent(this.state.address)}&officialOnly=true&alt=json&key=AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY',{
@@ -42,11 +42,20 @@ export default class MainPage extends React.Component{
                 
             var contestArr = [];
             for(i=0;i<res.contests.length;i++){
+                var candidateArr = [];
+                for(j=0;j<res.contests[i].candidates.length;j++){
+                    candidateArr.push({
+                        name: res.contests[i].candidates[j].name,
+                        party: res.contests[i].candidates[j].party
+                    })
+                }
                 contestArr.push({
                     electionName : res.election.name,
+                    electionDay: res.election.electionDay,
                     contestType : res.contests[i].type,
                     contestPrimaryParty : res.contests[i].primaryParty,
-                    contestBallotTitle : res.contests[i].ballotTitle
+                    contestBallotTitle : res.contests[i].ballotTitle,
+                    candidates: candidateArr
                 })
             }
 
@@ -71,12 +80,22 @@ export default class MainPage extends React.Component{
             )
         } else {
             var contests = this.state.dataSource.map((val, key) => {
+
+                var candidateList = val.candidates.map((cval,ckey) => {
+                    return (
+                    <View key={ckey}>
+                        <Text>{cval.name} - {cval.party}</Text>
+                    </View>
+                    )
+                })
                 return (
                     <View key={key} style={styles.item}>
-                        <Text>{val.contestBallotTitle}</Text>
-                        <Text>{val.electionName}</Text>
-                        <Text>{val.contestType}</Text>
-                        <Text>{val.contestPrimaryParty}</Text>
+                        <Text style={styles.electionName}>{val.electionName}</Text>
+                        <Text style={styles.ballotTitle}>{val.contestBallotTitle}</Text>
+                        <Text style={styles.contestType}>{val.contestType} - {val.contestPrimaryParty}   |   {val.electionDay}</Text>
+                        <View ckey={key}>
+                            {candidateList}
+                        </View>
                     </View>
                 )
             });
@@ -98,18 +117,45 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      paddingTop: 100
     },
     scrollview:{
         flexGrow: 1,
+        paddingTop: 20
     },
     item: {
         flex: 1,
         alignSelf: 'stretch',
         margin: 10,
-        alignItems:'center',
-        justifyContent:'center',
-        borderBottomWidth: 1,
-        borderBottomColor:'#777'
+        marginTop:5,
+        backgroundColor: '#fff',
+        borderRadius: 10,
+        borderLeftWidth: 10,
+        borderLeftColor:'#71afed',
+        borderRightWidth: 10,
+        borderRightColor:'#f77483'
+        
+    },
+    ballotTitle:{
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign:'left',
+        paddingTop: 15,
+        paddingBottom: 15,
+        padding: 5,
+        color: '#555'
+    },electionName:{
+        textAlign: 'left',
+        fontWeight: 'bold',
+        backgroundColor: '#71afed',
+        color: 'white',
+        padding: 5
+    },contestType:{
+        textAlign: 'right',
+        fontWeight: 'bold',
+        backgroundColor: '#f77483',
+        color: 'white',
+        padding: 5
     }
 });

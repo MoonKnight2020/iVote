@@ -87,20 +87,21 @@ export default class Signup extends React.Component{
     }
 
     signup = () => {
-        this.props.navigation.navigate('Address');
-        // fetch('http://192.168.1.1:8080/users',{
-        //     method:'POST',
-        //     headers: {
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //         firstName: this.state.firstName,
-        //         lastName: this.state.lastName,
-        //         email: this.state.email,
-        //         password: this.state.password
-        //     })
-        // })
+        //this.props.navigation.navigate('Address');
+        fetch('http://10.1.10.42:8080/voter',{
+            method:'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                email: this.state.email,
+                password: this.state.password
+            })
+        })
+         .then((response) => {alert(JSON.stringify(response))})
         // .then((response) => response.json())
         // .then((res) => {
         //     if(res.success === true){
@@ -108,7 +109,9 @@ export default class Signup extends React.Component{
         //     }else{
         //         alert(res.message);
         //     }
-        // }).done();
+        .catch((error) => {
+            alert(error);
+        });
     }
 
 }

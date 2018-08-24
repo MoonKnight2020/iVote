@@ -3,26 +3,16 @@
 ###
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/ivote?createDatabaseIfNotExist=true
+    url: jdbc:postgresql://ec2-18-191-110-90.us-east-2.compute.amazonaws.com:5432/postgres?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
     username: postgres
     password: integrate
     driverClassName: org.postgresql.Driver
   jpa:
       hibernate:
-        ddl-auto: none
+        ddl-auto: create
+        default_schema: SCHEMA_NAME
       show-sql: true
       database: postgresql
       database-platform: org.hibernate.dialect.PostgreSQLDialect
       open-in-view: false
       generate-ddl: false
-
-  ###
-  #   H2 Settings
-  ###
-  h2:
-    console:
-      enabled: true
-      path: /console
-      settings:
-        trace: false
-        web-allow-others: false

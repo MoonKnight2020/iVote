@@ -20,7 +20,7 @@ export default class MainPage extends React.Component{
         this.state = {
             isLoading: true,
             dataSource: null,
-            address:'120 West 1st Street Casper WY 82601',
+            address:'1263 Pacific Ave. Kansas City KS',
             key:'AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY'
         }
     }
@@ -29,8 +29,9 @@ export default class MainPage extends React.Component{
             var url = 'https://content.googleapis.com/civicinfo/v2/voterinfo?address=' + 
             encodeURIComponent(this.state.address) + 
             '&officialOnly=true&alt=json&key='+ 
-            encodeURIComponent(this.state.key);
-            //alert(url);
+            encodeURIComponent(this.state.key) +
+            '&electionId=2000';
+            alert(url);
             fetch(url,{
             //fetch('https://content.googleapis.com/civicinfo/v2/voterinfo?address=120%20W%201st%20St%2C%20Casper%2C%20WY%2082601&officialOnly=true&alt=json&key=AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY',{
             //fetch('https://content.googleapis.com/civicinfo/v2/voterinfo?address=${encodeURIComponent(this.state.address)}&officialOnly=true&alt=json&key=AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY',{
@@ -39,7 +40,11 @@ export default class MainPage extends React.Component{
         })
         .then((response) => response.json())
          .then((res) => {
-                
+            // if (!res || res.error) {
+            //     alert('Error while trying to fetch upcoming elections');
+            //     return;
+            // }
+            alert(JSON.stringify(res));
             var contestArr = [];
             for(i=0;i<res.contests.length;i++){
                 var candidateArr = [];

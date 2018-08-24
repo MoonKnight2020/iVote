@@ -66,7 +66,7 @@ export default class Login extends React.Component{
     }
 
     login = () => {
-        this.props.navigation.navigate('MainPage');
+        this.props.navigation.navigate('Representatives');
         // fetch('http://192.168.1.1:8080/users',{
         //     method:'POST',
         //     headers: {

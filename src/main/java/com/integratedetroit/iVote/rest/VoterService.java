@@ -42,16 +42,6 @@ public class VoterService {
         return voterRecord;
     }
 
-//    public VoterRecord getVoter(int voterId) {
-//        Optional<VoterRecord> record = this.repository.findById(voterId);
-//        if (record.isPresent()) {
-//            return VoterRecord.fromRecord(record.get());
-//        } else {
-//            VoterRecord notFound = new VoterRecord();
-//            //notFound.setVoterID(-1);
-//            return notFound;
-//        }
-//    }
 
     public Voter voterLogin(Voter voter) {
 

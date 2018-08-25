@@ -42,14 +42,27 @@ public class VoterService {
         return voterRecord;
     }
 
-    public VoterRecord getVoter(int voterId) {
-        Optional<VoterRecord> record = this.repository.findById(voterId);
+//    public VoterRecord getVoter(int voterId) {
+//        Optional<VoterRecord> record = this.repository.findById(voterId);
+//        if (record.isPresent()) {
+//            return VoterRecord.fromRecord(record.get());
+//        } else {
+//            VoterRecord notFound = new VoterRecord();
+//            //notFound.setVoterID(-1);
+//            return notFound;
+//        }
+//    }
+
+    public Voter voterLogin(Voter voter) {
+
+        VoterRecord voterRecord = createVoterRecord(voter);
+        Optional<VoterRecord> record = this.repository.findById(voterRecord.getEmailAddress());
         if (record.isPresent()) {
-            return VoterRecord.fromRecord(record.get());
-        } else {
-            VoterRecord notFound = new VoterRecord();
-            notFound.setVoterID(-1);
-            return notFound;
+            VoterRecord voterRecord1 = record.get();
+            if (voterRecord1.getPasswordHash().equals(voter.getPasswordHash())) {
+                return Voter.fromRecord(voterRecord1);
+            }
         }
+        return null;
     }
 }

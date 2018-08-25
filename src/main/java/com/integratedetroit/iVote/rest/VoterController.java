@@ -23,4 +23,18 @@ public class VoterController {
     ResponseEntity<Voter> createVoter(@RequestBody Voter voter) {
         return new ResponseEntity<>(this.service.createVoter(voter), HttpStatus.CREATED);
     }
+
+    @PostMapping("/login")
+    public @ResponseBody
+    ResponseEntity<Voter> voterLogin(@RequestBody Voter voter) {
+        Voter voterReturned =this.service.voterLogin(voter);
+        if(voterReturned!=null){
+            return new ResponseEntity<>(voterReturned, HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>(voterReturned, HttpStatus.NO_CONTENT);
+        }
+
+    }
+
 }

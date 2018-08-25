@@ -97,18 +97,23 @@ export default class Signup extends React.Component{
             body: JSON.stringify({
                 firstName: this.state.firstName,
                 lastName: this.state.lastName,
-                email: this.state.email,
-                password: this.state.password
+                emailAddress: this.state.email,
+                passwordHash: this.state.password
             })
         })
-         .then((response) => {alert(JSON.stringify(response))})
-        // .then((response) => response.json())
-        // .then((res) => {
-        //     if(res.success === true){
-        //         this.props.navigation.navigate('Address');
-        //     }else{
-        //         alert(res.message);
-        //     }
+        .then((response) =>  {
+            var pass =[];
+            pass.push({
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                emailAddress: this.state.email
+            })
+            if(response.status == '201'){
+                this.props.navigation.navigate('Address',{pass} );
+            }else{
+                alert(response.status);
+            }
+        })
         .catch((error) => {
             alert(error);
         });

@@ -11,10 +11,6 @@ import java.util.Objects;
 @Table(name = "voter_record")
 public class VoterRecord {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
     private String firstName;
 
     private String lastName;
@@ -28,7 +24,8 @@ public class VoterRecord {
     private String state;
 
     private int zipCode;
-
+    @Id
+    @Column(name="emailAddress",unique=true)
     private String emailAddress;
 
     private String passwordHash;
@@ -41,13 +38,6 @@ public class VoterRecord {
         return new VoterRecord();
     }
 
-    public long getVoterId() {
-        return this.id;
-    }
-
-    public void setVoterID(int number) {
-        this.id = number;
-    }
 
     public void setVoterFirstName(String firstName) {
         this.firstName = firstName;
@@ -127,8 +117,7 @@ public class VoterRecord {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         VoterRecord that = (VoterRecord) obj;
-        return id == that.id &&
-                zipCode == that.zipCode &&
+        return zipCode == that.zipCode &&
                 Objects.equals(firstName, that.firstName) &&
                 Objects.equals(lastName, that.lastName) &&
                 Objects.equals(streetAddress, that.streetAddress) &&
@@ -142,6 +131,6 @@ public class VoterRecord {
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, firstName, lastName, streetAddress, streetAddress2, city, state, zipCode, emailAddress, passwordHash);
+        return Objects.hash( firstName, lastName, streetAddress, streetAddress2, city, state, zipCode, emailAddress, passwordHash);
     }
 }

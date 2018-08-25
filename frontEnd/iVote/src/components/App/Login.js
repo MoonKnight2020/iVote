@@ -66,27 +66,27 @@ export default class Login extends React.Component{
     }
 
     login = () => {
-        this.props.navigation.navigate('MainPage');
-        // fetch('http://192.168.1.1:8080/users',{
-        //     method:'POST',
-        //     headers: {
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //         email: this.state.email,
-        //         password: this.state.password
-        //     })
-        // })
-        // .then((response) => response.json())
-        // .then((res) => {
-        //     if(res.success === true){
-        //         AsyncStorage.setItem('user', res.user);
-        //         this.props.navigation.navigate('MainPage');
-        //     }else{
-        //         alert(res.message);
-        //     }
-        // }).done();
+        //this.props.navigation.navigate('MainPage');
+        fetch('http://localhost:8080/voter',{
+            method:'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                emailAddress: this.state.email,
+                password: this.state.password
+            })
+        })
+        .then((response) => response.json())
+        .then((res) => {
+            if(res.success === true){
+                AsyncStorage.setItem('user', res.user);
+                this.props.navigation.navigate('MainPage');
+            }else{
+                alert(res.message);
+            }
+        }).done();
     }
 
     signup = () => {

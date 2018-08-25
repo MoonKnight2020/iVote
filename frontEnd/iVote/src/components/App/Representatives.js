@@ -18,7 +18,7 @@ export default class Representatives extends React.Component {
         this.state = {
             isLoading: true,
             dataSource: null,
-            address: '100 riverfront drive detroit MI',
+            address: '13304 irvington dr warren MI',
             key: 'AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY'
         }
     }

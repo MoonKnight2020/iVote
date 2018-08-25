@@ -84,28 +84,36 @@ export default class Signup extends React.Component{
     }
 
     saveAddress = () => {
-        alert('btn works');
-        // fetch('http://192.168.1.1:8080/users',{
-        //     method:'POST',
-        //     headers: {
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //         firstName: this.state.firstName,
-        //         lastName: this.state.lastName,
-        //         email: this.state.email,
-        //         password: this.state.password
-        //     })
-        // })
-        // .then((response) => response.json())
-        // .then((res) => {
-        //     if(res.success === true){
-        //         this.props.navigation.navigate('Address');
-        //     }else{
-        //         alert(res.message);
-        //     }
-        // }).done();
+        //alert('btn works');
+        var parm = this.props.navigation.state.params.pass;
+        alert(JSON.stringify(parm[0].firstName));
+        fetch('http://10.1.10.42:8080/voter',{
+            method:'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                firstName: parm[0].firstName,
+                lastName: parm[0].lastName,
+                emailAddress: parm[0].emailAddress,
+                streetAddress:this.state.line1,
+                streetAddress2:this.state.line2,
+                city:this.state.city,
+                state:this.state.USState,
+                zipCode:this.state.zip
+            })
+        })
+        .then((response) =>  {
+            if(response.status == '201'){
+                this.props.navigation.navigate('MainPage');
+            }else{
+                alert(response.status);
+            }
+        })
+        .catch((error) => {
+            alert(error);
+        });
     }
 
 }

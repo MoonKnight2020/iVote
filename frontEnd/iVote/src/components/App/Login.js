@@ -21,16 +21,16 @@ export default class Login extends React.Component{
         }
     }
 
-    componentDidMount() {
-        this._loadInitialState().done();
-    }
+    // componentDidMount() {
+    //     this._loadInitialState().done();
+    // }
 
-    _loadInitialState = async () => {
-        var value = await AsyncStorage.getItem('user');
-        if (value !== null){
-            this.props.navigation.navigate('MainPage');
-        }
-    }
+    // _loadInitialState = async () => {
+    //     var value = await AsyncStorage.getItem('user');
+    //     if (value !== null){
+    //         this.props.navigation.navigate('MainPage');
+    //     }
+    // }
 
     render() {
         return(
@@ -78,11 +78,19 @@ export default class Login extends React.Component{
                 password: this.state.password
             })
         })
-        .then((response) => response.json())
-        .then((res) => {
-            if(res.success === true){
-                AsyncStorage.setItem('user', res.user);
-                this.props.navigation.navigate('MainPage');
+        .then((response) => {
+            if(res.status == '200'){
+                var pass = [];
+                pass.push({
+                    address:'100 riverfront drive Detroit MI'
+                    // address: this.state.line1 + ' ' +
+                    //     this.state.line2 + ' ' +
+                    //     this.state.city + ' ' +
+                    //     this.state.state + ' ' +
+                    //     this.state.zip
+                })
+                //AsyncStorage.setItem('user', res.user);
+                this.props.navigation.navigate('MainPage',{pass});
             }else{
                 alert(res.message);
             }

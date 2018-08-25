@@ -18,14 +18,13 @@ export default class Representatives extends React.Component {
         this.state = {
             isLoading: true,
             dataSource: null,
-            address: '13304 irvington dr warren MI',
             key: 'AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY'
         }
     }
 
     componentDidMount() {
         var url = 'https://www.googleapis.com/civicinfo/v2/representatives?address=' +
-            encodeURIComponent(this.state.address) +
+            encodeURIComponent(this.props.navigation.state.params.pass[0].address) +
             '&key=' +
             encodeURIComponent(this.state.key);
         //alert(url);

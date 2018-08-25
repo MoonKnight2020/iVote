@@ -9,7 +9,7 @@ spring:
     driverClassName: org.postgresql.Driver
   jpa:
       hibernate:
-        ddl-auto: create
+        ddl-auto: update
         default_schema: SCHEMA_NAME
       show-sql: true
       database: postgresql

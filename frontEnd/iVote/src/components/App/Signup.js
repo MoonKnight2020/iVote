@@ -106,7 +106,8 @@ export default class Signup extends React.Component{
             pass.push({
                 firstName: this.state.firstName,
                 lastName: this.state.lastName,
-                emailAddress: this.state.email
+                emailAddress: this.state.email,
+                passwordHash: this.state.password
             })
             if(response.status == '201'){
                 this.props.navigation.navigate('Address',{pass} );

@@ -86,7 +86,7 @@ export default class Signup extends React.Component {
     saveAddress = () => {
         //alert('btn works');
         var parm = this.props.navigation.state.params.pass;
-        alert(JSON.stringify(parm[0].firstName));
+        //alert(JSON.stringify(parm[0].firstName));
         fetch('http://10.1.10.42:8080/voter', {
             method: 'POST',
             headers: {
@@ -97,6 +97,7 @@ export default class Signup extends React.Component {
                 firstName: parm[0].firstName,
                 lastName: parm[0].lastName,
                 emailAddress: parm[0].emailAddress,
+                passwordHash: parm[0].passwordHash,
                 streetAddress: this.state.line1,
                 streetAddress2: this.state.line2,
                 city: this.state.city,
@@ -110,10 +111,11 @@ export default class Signup extends React.Component {
                     address: this.state.line1 + ' ' +
                         this.state.line2 + ' ' +
                         this.state.city + ' ' +
-                        this.state.state + ' ' +
+                        this.state.USState + ' ' +
                         this.state.zip
                 })
                 if (response.status == '201') {
+                    //alert(JSON.stringify(pass));
                     this.props.navigation.navigate('MainPage',{pass});
                 } else {
                     alert(response.status);

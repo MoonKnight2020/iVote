@@ -11,9 +11,9 @@ import {
 } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
-export default class Login extends React.Component{
+export default class Login extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             email: '',
@@ -33,19 +33,19 @@ export default class Login extends React.Component{
     // }
 
     render() {
-        return(
+        return (
             <KeyboardAvoidingView behavior='padding' style={styles.wrapper}>
                 <View style={styles.container}>
                     <Image source={require('../../Images/icon.png')} style={styles.loginLogo} />
                     <TextInput
                         style={styles.textInput}
-                        onChangeText={(email) => this.setState({email})}
+                        onChangeText={(email) => this.setState({ email })}
                         placeholder='Email'
                         underlineColorAndroid='transparent'
                     />
                     <TextInput
                         style={styles.textInput}
-                        onChangeText={(password) => this.setState({password})}
+                        onChangeText={(password) => this.setState({ password })}
                         placeholder='Password'
                         underlineColorAndroid='transparent'
                         secureTextEntry={true}
@@ -67,34 +67,38 @@ export default class Login extends React.Component{
 
     login = () => {
         //this.props.navigation.navigate('MainPage');
-        fetch('http://localhost:8080/voter',{
-            method:'POST',
+        fetch('http://10.1.10.42:8080/voter/login', {
+            method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 emailAddress: this.state.email,
-                password: this.state.password
+                passwordHash: this.state.password
             })
         })
-        .then((response) => {
-            if(res.status == '200'){
-                var pass = [];
-                pass.push({
-                    address:'100 riverfront drive Detroit MI'
-                    // address: this.state.line1 + ' ' +
-                    //     this.state.line2 + ' ' +
-                    //     this.state.city + ' ' +
-                    //     this.state.state + ' ' +
-                    //     this.state.zip
-                })
-                //AsyncStorage.setItem('user', res.user);
-                this.props.navigation.navigate('MainPage',{pass});
-            }else{
-                alert(res.message);
-            }
-        }).done();
+            .then((data) => {
+                if (data.status == '200') {
+                    data.json().then((body) => {
+
+                        //alert(JSON.stringify(body));
+                        var pass = [];
+                        pass.push({
+                            //address:'100 riverfront drive Detroit MI'
+                            address: body.streetAddress + ' ' +
+                                body.streetAddress2 + ' ' +
+                                body.city + ' ' +
+                                body.state + ' ' +
+                                body.zipCode
+                        })
+                        //AsyncStorage.setItem('user', res.user);
+                        this.props.navigation.navigate('MainPage', { pass });
+                    })
+                } else {
+                    alert("Login Failed");
+                }
+            }).done();
     }
 
     signup = () => {
@@ -108,12 +112,12 @@ const styles = StyleSheet.create({
         flex: 1
     },
     container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-      paddingLeft: 40,
-      paddingRight: 40
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingLeft: 40,
+        paddingRight: 40
     },
     loginLogo: {
         width: 200,

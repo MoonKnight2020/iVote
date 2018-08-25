@@ -15,8 +15,6 @@ import { createStackNavigator } from 'react-navigation';
 
 export default class MainPage extends React.Component {
 
-
-
     render() {
         return (
             <KeyboardAvoidingView behavior='padding' style={styles.wrapper}>

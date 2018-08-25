@@ -135,7 +135,7 @@ export default class Representatives extends React.Component {
                             onPress={() => {
                                 this.props.navigation.navigate('RepInfo', { val })
                             }}>
-                            <View style={[styles.item,{
+                            <View style={[styles.item, {
                                 backgroundColor: colors[key % colors.length]
                             }]}>
                                 <Text style={styles.office}>{val.office} </Text>
@@ -178,13 +178,13 @@ const styles = StyleSheet.create({
         //backgroundColor: '#fff',
         borderRadius: 15,
         borderLeftWidth: 5,
-        borderLeftColor:'#71afed',
+        borderLeftColor: '#71afed',
         borderRightWidth: 5,
-        borderRightColor:'#f77483',
+        borderRightColor: '#f77483',
         borderTopWidth: 5,
-        borderTopColor:'#71afed',
+        borderTopColor: '#71afed',
         borderBottomWidth: 5,
-        borderBottomColor:'#f77483'
+        borderBottomColor: '#f77483'
 
     },
     repName: {

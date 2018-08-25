@@ -37,11 +37,13 @@ export default class MainPage extends React.Component {
     }
 
     gotoReps = () => {
-        this.props.navigation.navigate('Representatives');
+        var pass = this.props.navigation.state.params.pass;
+        this.props.navigation.navigate('Representatives', {pass});
     }
 
     gotoElections = () => {
-        this.props.navigation.navigate('Elections');
+        var pass = this.props.navigation.state.params.pass;
+        this.props.navigation.navigate('Elections',{pass});
     }
 }
 

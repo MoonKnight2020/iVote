@@ -20,14 +20,13 @@ export default class Elections extends React.Component {
         this.state = {
             isLoading: true,
             dataSource: null,
-            address: '1263 Pacific Ave. Kansas City KS',
             key: 'AIzaSyAAAvpCSENujGpZvDHFtDbsP5G0TP_hDFY'
         }
     }
 
     componentDidMount() {
         var url = 'https://content.googleapis.com/civicinfo/v2/voterinfo?address=' +
-            encodeURIComponent(this.state.address) +
+            encodeURIComponent(this.props.navigation.state.params.pass[0].address) +
             '&officialOnly=true&alt=json&key=' +
             encodeURIComponent(this.state.key) +
             '&electionId=2000';
